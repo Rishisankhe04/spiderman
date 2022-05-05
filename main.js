@@ -15,7 +15,7 @@ function preload(){
  }
  function draw(){
  image(video,0,0,200,200);
- image(spiderman,noseX,noseY,50,50);
+ image(spiderman,noseX,noseY,150,150);
  }
  function takesnap(){
      save("filter.png");
@@ -25,8 +25,8 @@ function preload(){
  }
  function gotposes(results){
     if(results.length>0){
-        noseX=results[0].pose.nose.x;
-        noseY=results[0].pose.nose.y;
+        noseX=results[0].pose.nose.x-50;
+        noseY=results[0].pose.nose.y-50;
         console.log(results);
         console.log("Nose X:"+noseX);
         console.log("Nose Y:"+noseY);
